@@ -2,8 +2,8 @@ export const jokes = [
   {
     id: 1,
     category: "general",
-    question: "Why don’t eggs tell jokes?",
-    answer: "Because they’d crack each other up.",
+    question: "Why don't eggs tell jokes?",
+    answer: "Because they'd crack each other up.",
   },
   {
     id: 2,
