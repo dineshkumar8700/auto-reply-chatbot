@@ -1,4 +1,4 @@
-const vocabulary = [
+export const dictionary = [
   {
     id: 1,
     word: "Abundant",
