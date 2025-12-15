@@ -7,25 +7,24 @@ const generateStructure = () => {
   } |\n`;
   const footer = `${"-".repeat(80)}`;
 
-  return header + body + footer;
+  return [header, body, footer];
 };
 
 const showFeatures = () => {
-  console.log(generateStructure());
+  const structure = generateStructure();
+  console.log(structure.join(""));
   features.forEach((f) => {
     const feature = f.feature.padEnd(25);
     const examplePrompt = f.examplePrompt.padEnd(35);
     const isWorking = ("" + f.isWorking).padEnd(10);
-    if (f.isWorking !== "Yes") {
-      console.log(
-        `|%c ${feature} | ${examplePrompt} | ${isWorking} |`,
-        "color: #c4c4c4",
-      );
+    const deniFeature = `| ${feature} | ${examplePrompt} | ${isWorking} |`;
+    if (!f.isWorking) {
+      console.log(`%c${deniFeature}`, "color: #949494");
     } else {
-      console.log(`| ${feature} | ${examplePrompt} | ${isWorking} |`);
+      console.log(deniFeature);
     }
   });
-  console.log(`${"-".repeat(80)}`);
+  console.log(structure[2]);
 };
 
 export const botFeatures = () => {

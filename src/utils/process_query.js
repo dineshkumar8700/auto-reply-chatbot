@@ -3,7 +3,7 @@ export const processQuery = (query) => {
   switch (true) {
     case request.includes("joke"):
       return "joke";
-    case request.includes("word"):
+    case request.includes("word") || request.includes("vocabulary"):
       return "word";
     case request.includes("help"):
       return "--help";
