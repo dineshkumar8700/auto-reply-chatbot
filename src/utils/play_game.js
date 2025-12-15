@@ -1,16 +1,18 @@
 import { availableGames } from "../data/available_games.js";
+import { guessCricketerName } from "../games/guess_cricketer.js";
 import { guessTheNumberGame } from "../games/guess_number.js";
 
 const games = {
   1: guessTheNumberGame,
+  2: guessCricketerName,
 };
 
 const selectGameToPlay = () => {
-  console.log("Following are the games available:");
+  console.log("\nFollowing are the games available:");
   availableGames.forEach((game) => {
     console.log(`Id: ${game.id} | Name: ${game.name}`);
   });
-  const choice = prompt("Which game do you want to play? (type game id)");
+  const choice = prompt("\nWhich game do you want to play? (type game id):");
   return choice;
 };
 
