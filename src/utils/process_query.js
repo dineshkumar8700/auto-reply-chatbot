@@ -1,17 +1,13 @@
-import { responseToQuery } from "./reponse_query.js";
-
 export const processQuery = (query) => {
-  if (query.includes("joke")) {
-    return responseToQuery("joke");
+  const request = query.toLowerCase();
+  switch (true) {
+    case request.includes("joke"):
+      return "joke";
+    case request.includes("word"):
+      return "word";
+    case request.includes("help"):
+      return "--help";
+    default:
+      return "noMatch";
   }
-
-  if (query.includes("word")) {
-    return responseToQuery("word");
-  }
-
-  if (query === "help") {
-    return responseToQuery("help");
-  }
-
-  return "Oops!😬 Nothing matched to your query. try again.";
 };

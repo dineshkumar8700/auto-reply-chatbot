@@ -3,7 +3,7 @@ import { features } from "../data/features.js";
 const generateStructure = () => {
   const header = `${"-".repeat(80)}\n`;
   const body = `| ${"Feature".padEnd(25)} | ${"Example".padEnd(35)} | ${
-    "Is Ac".padEnd(10)
+    "Is Active".padEnd(10)
   } |\n`;
   const footer = `${"-".repeat(80)}`;
 
@@ -16,9 +16,16 @@ const showFeatures = () => {
     const feature = f.feature.padEnd(25);
     const examplePrompt = f.examplePrompt.padEnd(35);
     const isWorking = ("" + f.isWorking).padEnd(10);
-
-    console.log(`| ${feature} | ${examplePrompt} | ${isWorking} |`);
+    if (f.isWorking !== "Yes") {
+      console.log(
+        `|%c ${feature} | ${examplePrompt} | ${isWorking} |`,
+        "color: #c4c4c4",
+      );
+    } else {
+      console.log(`| ${feature} | ${examplePrompt} | ${isWorking} |`);
+    }
   });
+  console.log(`${"-".repeat(80)}`);
 };
 
 export const botFeatures = () => {
@@ -27,5 +34,5 @@ export const botFeatures = () => {
   console.log("\nFollowing are the things that Denie can do:\n");
 
   showFeatures();
-  return "Job Done"
+  return "Job Done";
 };
