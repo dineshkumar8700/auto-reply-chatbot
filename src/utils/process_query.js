@@ -7,6 +7,8 @@ export const processQuery = (query) => {
       return "word";
     case request.includes("help"):
       return "--help";
+    case request.includes("game"):
+      return "game";
     default:
       return "noMatch";
   }

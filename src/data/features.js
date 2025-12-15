@@ -12,7 +12,7 @@ export const features = [
   {
     feature: "Play Game",
     examplePrompt: "let's play a game",
-    isWorking: "Not Yet",
+    isWorking: "Yes",
   },
   {
     feature: "Calculator",
