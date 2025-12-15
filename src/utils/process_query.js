@@ -9,5 +9,9 @@ export const processQuery = (query) => {
     return responseToQuery("word");
   }
 
+  if (query === "help") {
+    return responseToQuery("help");
+  }
+
   return "Oops!😬 Nothing matched to your query. try again.";
 };
