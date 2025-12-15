@@ -33,7 +33,7 @@ const guessName = (player) => {
   console.log(`Correct Name is: ${player.name}\n`);
 };
 
-const startGame = (name) => {
+const startGame = () => {
   const player = getRandomCricketer();
   guessName(player);
 };
