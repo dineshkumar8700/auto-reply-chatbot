@@ -15,3 +15,4 @@ const services = {
 export const responseToQuery = (query) => {
   return services[query]();
 };
+

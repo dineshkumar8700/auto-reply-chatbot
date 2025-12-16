@@ -17,6 +17,15 @@ const selectGameToPlay = () => {
 };
 
 export const playGame = () => {
-  const selectedGame = selectGameToPlay();
-  return games[selectedGame]();
+  let selectedGame = selectGameToPlay();
+
+  while (!Object.values(games).includes(selectedGame)) {
+    try {
+      return games[selectedGame]();
+    } catch (err) {
+      if (selectedGame === "exit") return;
+      console.log("Wrong id for game. select again");
+      selectedGame = selectGameToPlay();
+    }
+  }
 };
