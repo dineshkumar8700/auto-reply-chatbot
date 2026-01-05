@@ -14,8 +14,8 @@ export const jokes = [
   {
     id: 3,
     category: "general",
-    question: "Why don’t some couples go to the gym?",
-    answer: "Because some relationships don’t work out.",
+    question: "Why don't some couples go to the gym?",
+    answer: "Because some relationships don't work out.",
   },
   {
     id: 4,
@@ -26,13 +26,13 @@ export const jokes = [
   {
     id: 5,
     category: "general",
-    question: "Why don’t skeletons fight each other?",
-    answer: "They don’t have the guts.",
+    question: "Why don't skeletons fight each other?",
+    answer: "They don't have the guts.",
   },
   {
     id: 6,
     category: "general",
-    question: "Why don’t graveyards ever get overcrowded?",
+    question: "Why don't graveyards ever get overcrowded?",
     answer: "Because people are dying to get in.",
   },
   {
@@ -58,6 +58,6 @@ export const jokes = [
     category: "general",
     question: "I started exercising…",
     answer:
-      "But I lost my balance, so now I’m just running away from my problems.",
+      "But I lost my balance, so now I'm just running away from my problems.",
   },
 ];
