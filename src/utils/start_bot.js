@@ -6,8 +6,8 @@ export const startBot = async (name) => {
 
   while (query !== "exit") {
     const processedQuery = processQuery(query);
-    const response = await responseToQuery(processedQuery);
-    console.log(response);
+    const response = await responseToQuery(processedQuery, query);
+    console.log(response || "Hope you enjoyed 😃");
     query = prompt(`\n${name} what else I can help you with 👀..?`);
   }
 };

@@ -3,6 +3,7 @@ import { newWord } from "../services/new_word.js";
 import { botFeatures } from "../services/features.js";
 import { noMatch } from "../services/no_match.js";
 import { playGame } from "../services/play_game.js";
+import { calculator } from "../services/calculator.js";
 
 const services = {
   joke: tellJoke,
@@ -10,9 +11,9 @@ const services = {
   "--help": botFeatures,
   noMatch: noMatch,
   game: playGame,
+  calculate: calculator,
 };
 
-export const responseToQuery = (query) => {
-  return services[query]();
+export const responseToQuery = (processedQuery, originalQuery) => {
+  return services[processedQuery](originalQuery);
 };
-
